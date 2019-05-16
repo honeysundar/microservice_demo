@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                echo "build in progress"
+                sh 'mvn package'
             }
         }
         stage('Test') { 
