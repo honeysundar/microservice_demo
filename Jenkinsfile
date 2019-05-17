@@ -1,9 +1,6 @@
 pipeline {
     agent any
-    tools { 
-        maven 'Maven 3.0' 
-        jdk 'jdk8' 
-    }
+    
     stages {
         stage ('Initialize') {
             steps {
@@ -16,6 +13,9 @@ pipeline {
 
         stage ('Build') {
             steps {
+                withMaven(maven: 'Maven 3') {
+        
+        sh 'mvn clean package'
                 echo 'This is a minimal pipeline.'
             }
         }
