@@ -17,4 +17,3 @@ steps:
     echo Starting the build
     mvn package
   displayName: 'Build with Maven'
-  displayName: 'Run a multi-line script'
